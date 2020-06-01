@@ -11,10 +11,10 @@ public class Main {
     public static void main(String[] args) {
         SearchRunner searchRunner = new SearchRunner();
 
-        // interactive mode
-//        searchRunner.runAppWithView();
+        // interactive mode example
+        searchRunner.runAppWithView();
 
-        // auto mode
+        // auto mode example
         List<String> queries = new LinkedList<>();
         queries.add("google");
         queries.add("java jsoup");
