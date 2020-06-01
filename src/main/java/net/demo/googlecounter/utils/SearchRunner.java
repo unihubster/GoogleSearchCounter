@@ -1,4 +1,4 @@
-package net.demo.utils;
+package net.demo.googlecounter.utils;
 
 import org.jsoup.nodes.Document;
 
@@ -13,6 +13,9 @@ public class SearchRunner {
 
     public void runAppWithView() {
         switch (view.getAppModeFromUser()) {
+            case (1):
+                runWordsGoogleSearch();
+                break;
             case (2):
                 runLinkGoogleSearch();
                 break;

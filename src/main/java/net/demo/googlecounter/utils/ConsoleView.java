@@ -1,4 +1,4 @@
-package net.demo.utils;
+package net.demo.googlecounter.utils;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -6,21 +6,24 @@ import java.util.Scanner;
 public class ConsoleView {
 
     protected int getAppModeFromUser() {
-        System.out.println("Please, choose application mode and enter corresponding number:\n\n" +
+        System.out.println("\nPlease, choose application mode and enter corresponding number:\n\n" +
                 "1 - (default mode) put words for Google Search query;\n" +
                 "2 - put direct Google search link (ex. https://www.google.com/search?q=java+jsoup)\n"
         );
+
         try {
             int result = new Scanner(System.in).nextInt();
-            if (result == 2) {
+            if (result == 1) {
+                return 1;
+            } else if (result == 2) {
                 return 2;
             } else {
                 throw new InputMismatchException();
             }
         } catch (InputMismatchException e) {
             System.err.println("Invalid input value. Default mode running");
+            return 1;
         }
-        return 1;
     }
 
     protected String getLinkFromUser() {
