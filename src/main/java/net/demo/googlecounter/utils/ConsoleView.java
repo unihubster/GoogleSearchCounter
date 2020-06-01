@@ -44,7 +44,7 @@ public class ConsoleView {
         return words.trim();
     }
 
-    protected void displaySearchCount(int count) {
+    protected void displaySearchCount(long count) {
         System.out.println("Google search results count is around " + count);
     }
 

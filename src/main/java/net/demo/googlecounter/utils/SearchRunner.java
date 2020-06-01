@@ -24,8 +24,8 @@ public class SearchRunner {
         }
     }
 
-    public Map<String, Integer> runAppInAutoMode(List<String> queries) {
-        Map<String, Integer> searchCounts = new TreeMap<>();
+    public Map<String, Long> runAppInAutoMode(List<String> queries) {
+        Map<String, Long> searchCounts = new TreeMap<>();
         for (String query : queries) {
             try {
                 String link = onlineSearchProcessor.prepareGoggleLink(query);
@@ -39,7 +39,7 @@ public class SearchRunner {
         return searchCounts;
     }
 
-    public int runAppInAutoMode(String query) throws IOException {
+    public long runAppInAutoMode(String query) throws IOException {
         String link = onlineSearchProcessor.prepareGoggleLink(query);
         view.displayText(link);
         Document document = onlineSearchProcessor.getPage(link);

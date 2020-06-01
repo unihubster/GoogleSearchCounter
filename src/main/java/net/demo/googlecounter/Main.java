@@ -12,10 +12,11 @@ public class Main {
         SearchRunner searchRunner = new SearchRunner();
 
         // interactive mode
-        searchRunner.runAppWithView();
+//        searchRunner.runAppWithView();
 
         // auto mode
         List<String> queries = new LinkedList<>();
+        queries.add("google");
         queries.add("java jsoup");
         queries.add("java");
         queries.add("jsoup");
@@ -23,7 +24,7 @@ public class Main {
         queries.add("selenium");
         queries.add("cucumber");
 
-        Map<String, Integer> queriesSearchResultCounts = searchRunner.runAppInAutoMode(queries);
+        Map<String, Long> queriesSearchResultCounts = searchRunner.runAppInAutoMode(queries);
         queriesSearchResultCounts.forEach((query, count) -> System.out.println(query + "=" + count));
     }
 

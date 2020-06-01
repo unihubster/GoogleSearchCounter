@@ -5,7 +5,7 @@ There are two modes:
 * you can put Google search link (ex. https://www.google.com/search?q=java+jsoup)
 * you can put words for Google search query (ex. "java jsoup")
 
-Jsoup is used for Google search page parsing.
+Jsoup library is used for Google search page parsing. https://jsoup.org/
 
 Build Maven command "mvn clean package" creates jar file with dependencies inside.
 
@@ -16,3 +16,7 @@ You can run the application on your Windows PC with preinstalled Java version 8 
 if you download both file google-search-counter-1.0.0.jar and google-search-counter-1.0.0.bat,
 put them in one folder and click on google-search-counter-1.0.0.bat.
 It starts command console with a dialog.
+
+## Note
+Please notice, Google returns different total number of search results in different browsers.
+That's why results in application can be another than results in your usual browser. 

@@ -18,9 +18,9 @@ public class OnlineSearchProcessor {
         return GOOGLE_SEARCH_LINK + words.replace(" ", GOOGLE_SEARCH_CONCAT_CHAR);
     }
 
-    protected int parseGoogleSearchResultsCount(Document document) {
+    protected long parseGoogleSearchResultsCount(Document document) {
         String resultStats = document.getElementById("result-stats").text();
-        return Integer.parseInt(
+        return Long.parseLong(
                 resultStats
                         .substring(resultStats.indexOf(':') + 1, resultStats.indexOf('(') - 1)
                         .trim()
