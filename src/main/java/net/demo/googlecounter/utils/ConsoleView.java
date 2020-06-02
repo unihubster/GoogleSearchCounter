@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ConsoleView {
 
     protected int getAppModeFromUser() {
-        System.out.println("\nPlease, choose application mode and enter corresponding number:\n\n" +
+        System.out.println("Please, choose application mode and enter corresponding number:\n\n" +
                 "1 - (default mode) put words for Google Search query;\n" +
                 "2 - put direct Google search link (ex. https://www.google.com/search?q=java+jsoup)\n"
         );
